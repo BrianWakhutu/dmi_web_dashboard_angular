@@ -11,7 +11,8 @@ import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
 import * as HighchartsMore from 'highcharts/highcharts-more.src';
 import * as HighchartsSolidGauge from 'highcharts/modules/solid-gauge';
-
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDate, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
@@ -19,6 +20,10 @@ import * as HighchartsSolidGauge from 'highcharts/modules/solid-gauge';
 })
 
 export class OverviewComponent implements OnInit {
+
+
+
+
 
   //#region Prerequisites --> COVID-19 Summary
   covid19Summary: Covid19Summary[] = [];
@@ -66,8 +71,10 @@ export class OverviewComponent implements OnInit {
   highcharts2 = Highcharts;
   highcharts3 = Highcharts;
 
-  constructor(private reviewService: ReviewService) {
+  constructor(private reviewService: ReviewService,calendar: NgbCalendar) {
     //this.loadOverallPositivity();
+
+
   }
 
   ngOnInit() {

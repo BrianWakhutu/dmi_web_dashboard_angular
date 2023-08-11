@@ -235,19 +235,23 @@ export class OverviewComponent implements OnInit {
           enabled: false,
         },
         yAxis: {
+
           stops: [[1, 'blue']],
           lineWidth: 0,
           tickWidth: 0,
           minorTickInterval: null,
+          startOnTick:true,
           tickAmount: 2,
           title: {
             y: -70,
+            text: null
           },
           labels: {
             y: 16,
           },
           min: 0,
           max: 100,
+
         },
         plotOptions: {
           solidgauge: {
@@ -266,7 +270,7 @@ export class OverviewComponent implements OnInit {
             dataLabels: {
               format:
                 '<div style="text-align:center">' +
-                '<span style="font-size:25px">{y}%</span><br/>' +
+                '<span style="font-size:18px">{y}%</span><br/>' +
                 '</div>',
             },
             tooltip: {
